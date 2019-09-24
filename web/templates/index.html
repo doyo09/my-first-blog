@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <section id="header">
+            <div>
+                <div>
+                    <div>
+                        <nav>
+
+                            <div>
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a href="#"></a>
+                            </div>
+
+                            <div>
+                                <ul>
+                                    <li><a href="#header">Home <span class="sr-only">(current)</span></a></li>
+                                    <li><a href="javascript:getAccount();">Account</a></li>
+                                    <li><a href="javascript:getTrasaction();">Transaction</a></li>
+                                    <li><a href="javascript:getBlock();">Blocks</a></li>
+                                    <li><a href="javascript:getTable();">Tables</a></li>
+                                    <li><a href="javascript:account_register();">Register</a></li>
+                                    <li><a href="javascript:account_modify();">Modify</a></li>
+                                    <li><a href="javascript:account_remove();">Remove</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+{% endblock content %}
+
+
+

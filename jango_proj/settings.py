@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #장고에게 APP "blog"를 사용한다고 알려주자
     'blog',
+    'web',
+
 ]
 
 MIDDLEWARE = [
@@ -106,7 +108,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-kr'
 
 #time-zone 수정
 TIME_ZONE = 'Asia/Seoul' #'UTC'
@@ -124,6 +127,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # STATIC ROOT 정적파일 경로
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 
 
