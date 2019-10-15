@@ -1,0 +1,171 @@
+{% extends "base_full.html" %}
+
+{% block content %}
+
+
+        <section id="header">
+            <div class="header-area">
+                <div class="header_menu text-center" data-spy="affix" data-offset-top="50" id="nav">
+                    <div class="container">
+                        <nav class="navbar navbar-default zero_mp ">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-
+                                         target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand custom_navbar-brand" href="#"></a>
+                            </div>
+
+                            <div class="collapse navbar-collapse zero_mp" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right main_menu">
+                                    <li class=""><a href="/base/">Home </a></li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">About
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/base/about/">About Company</a></li>
+                                            <li><a href="/base/howtouse/">이용방법 </a></li>
+                                            <li><a href="/base/howtousewithVideo/">이용방법 영상 예시</a></li>
+                                            <li><a href="/base/refund/">취소 및 환불 규정</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">Product
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/base/about/">Special Offer</a></li>
+                                            <li><a href="javascript:getTrasaction();">New Arrivals</a></li>
+                                            <li><a href="javascript:getTrasaction();">Populars</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">SHARE PURCHASE
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/base/about/">상품 검색</a></li>
+                                            <li><a href="javascript:getTrasaction();">공유구매 신청</a></li>
+                                            <li><a href="javascript:getTrasaction();">수령대기 상품</a></li>
+                                            <li><a href="javascript:getTrasaction();">취소 및 환불</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">BOARD
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <<li><a href="/blog/board/">공지사항</a></li>
+                                            <li><a href="/blog/issues/">공유구매자 신고</a></li>
+                                            <li><a href="/blog/ItemRequest/">신상품 요청</a></li>
+                                            <li><a href="/blog/">Recipe 공유</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="active dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">ACCOUNT<span class="sr-only">(current)</span>
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/base/about/">결제관리</a></li>
+                                            <li><a href="/account/signup/">Signup</a></li>
+                                            <li><a href="/account/login/">Login</a></li>
+                                            <li><a href="/account/logout/">Logout</a></li>
+                                            <li><a href="javascript:getTrasaction();">신뢰도관리</a></li>
+                                            <li><a href="javascript:getTrasaction();">공유구매자 리뷰</a></li>
+                                            <li><a href="javascript:getTrasaction();">지역설정</a></li>
+                                            <li><a href="javascript:getTrasaction();">포인트관리</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav" style="background-color: #f1f1f1; height: 100%;">
+      <h4>ACCOUNT</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="/blog/board/">결제관리</a></li>
+        <li class="active"><a href="/account/signup/">SIGNUP</a></li>
+        <li><a href="/account/login/">LOGIN</a></li>
+        <li><a href="/account/logout/">LOGOUT</a></li>
+        <li><a href="/blog/">신뢰도 관리</a></li>
+        <li><a href="/blog/">공유구매자 리뷰</a></li>
+        <li><a href="/blog/">지역설정</a></li>
+        <li><a href="/blog/">포인트 관리</a></li>
+      </ul><br>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blog..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+
+      <!--빈칸만들기-->
+    <div class="col-sm-3"></div>
+
+    <div class="col-sm-4">
+
+         <div class="container">
+            <h1>sign up!</h1><br><br>
+
+            <form method="POST" action="{%url 'signup'%}">
+                {% csrf_token %}
+                Username:
+                <br>
+                <input name="username" type="text">
+                <br>
+                Password:
+                <br>
+                <input name="password1"type="password">
+                <br>
+                Confirm Password:
+                <br>
+                <input name="password2"type="password">
+                <br>
+                Nickname :
+                <br>
+                <input name="nickname"type="text">
+                <br>
+                Account Number :
+                <br>
+                <input name="Account Number"type="text">
+                <br>
+                Birthday :
+                <br>
+                <input name="Birthdate"type="text">
+                <br>
+                Phone Number :
+                <br>
+                <input name="Phone Number"type="text">
+                <br>
+                Region :
+                <br>
+                <input name="Region"type="text">
+                <br><br>
+                <input type="submit" class="btn btn-primary" value="sign up">
+            </form>
+        </div>
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+{% endblock content %}
+
+
+

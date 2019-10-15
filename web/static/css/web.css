@@ -1,0 +1,73 @@
+h1, h2, h3, h4 {
+    color: #000000;
+    font-family: 'Lobster', cursive;
+
+}
+
+/*.navbar-brand {*/
+    /*display: inline-block;*/
+    /*padding-top: .3125rem;*/
+    /*padding-bottom: .3125rem;*/
+    /*margin-right: 1rem;*/
+    /*font-size: 1.25rem;*/
+    /*line-height: inherit;*/
+    /*white-space: nowrap;*/
+/*}*/
+.bd-navbar {
+    min-height: 4rem;
+    background-color: #ff9400;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar-nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+/*.flex-row {*/
+    /*-ms-flex-direction: row!important;*/
+    /*flex-direction: row!important;*/
+/*}*/
+
+
+.flex-row > li > h1 > a {
+    padding: 14px 36px;
+    border-right: 1px solid rgba(0,0,0,0.15);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+    color: #000000;
+    /*밑줄 없애기*/
+    text-decoration:none!important;
+}
+
+#sub-menu {
+  position: absolute;
+  background: #ff9400;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.15s ease-in;
+}
+
+#sub-menu > li > h1 > a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.flex-row > li:hover #sub-menu {
+  opacity: 1;
+  visibility: visible;
+}

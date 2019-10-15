@@ -1,0 +1,249 @@
+<!--{% extends "base_full.html" %}-->
+
+<!--{% block content %}-->
+
+        <!--<section id="header">-->
+            <!--<div class="header-area">-->
+                <!--<div class="header_menu text-center" data-spy="affix" data-offset-top="50" id="nav">-->
+                    <!--<div class="container">-->
+                        <!--<nav class="navbar navbar-default zero_mp ">-->
+                            <!--<div class="navbar-header">-->
+                                <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data- -->
+                                         <!--target="#bs-example-navbar-collapse-1" aria-expanded="false">-->
+                                    <!--<span class="sr-only">Toggle navigation</span>-->
+                                    <!--<span class="icon-bar"></span>-->
+                                    <!--<span class="icon-bar"></span>-->
+                                    <!--<span class="icon-bar"></span>-->
+                                <!--</button>-->
+                                <!--<a class="navbar-brand custom_navbar-brand" href="#"></a>-->
+                            <!--</div>-->
+
+                            <!--<div class="collapse navbar-collapse zero_mp" id="bs-example-navbar-collapse-1">-->
+                                <!--<ul class="nav navbar-nav navbar-right main_menu">-->
+                                    <!--<li class=""><a href="/base/">Home </a></li>-->
+                                    <!--<li class="dropdown">-->
+                                        <!--<a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">About-->
+                                        <!--<span class="caret"></span></a>-->
+                                        <!--<ul class="dropdown-menu">-->
+                                            <!--<li><a href="/base/about/">About Company</a></li>-->
+                                            <!--<li><a href="/base/howtouse/">이용방법 </a></li>-->
+                                            <!--<li><a href="/base/howtousewithVideo/">이용방법 영상 예시</a></li>-->
+                                            <!--<li><a href="/base/refund/">취소 및 환불 규정</a></li>-->
+                                        <!--</ul>-->
+                                    <!--</li>-->
+                                    <!--<li class="dropdown">-->
+                                        <!--<a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">Product-->
+                                        <!--<span class="caret"></span></a>-->
+                                        <!--<ul class="dropdown-menu">-->
+                                            <!--<li><a href="/base/about/">Special Offer</a></li>-->
+                                            <!--<li><a href="javascript:getTrasaction();">New Arrivals</a></li>-->
+                                            <!--<li><a href="javascript:getTrasaction();">Populars</a></li>-->
+                                        <!--</ul>-->
+                                    <!--</li>-->
+                                    <!--<li class="dropdown">-->
+                                        <!--<a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">SHARE PURCHASE-->
+                                        <!--<span class="caret"></span></a>-->
+                                        <!--<ul class="dropdown-menu">-->
+                                            <!--<li><a href="/base/about/">상품 검색</a></li>-->
+                                            <!--<li><a href="javascript:getTrasaction();">공유구매 신청</a></li>-->
+                                            <!--<li><a href="javascript:getTrasaction();">수령대기 상품</a></li>-->
+                                            <!--<li><a href="javascript:getTrasaction();">취소 및 환불</a></li>-->
+                                        <!--</ul>-->
+                                    <!--</li>-->
+                                    <!--<li class="dropdown">-->
+                                        <!--<a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">BOARD-->
+                                        <!--<span class="caret"></span></a>-->
+                                        <!--<ul class="dropdown-menu">-->
+                                            <!--<li><a href="/blog/board/">공지사항</a></li>-->
+                                            <!--<li><a href="/blog/issues/">공유구매자 신고</a></li>-->
+                                            <!--<li><a href="/blog/ItemRequest/">신상품 요청</a></li>-->
+                                            <!--<li><a href="/blog/">Recipe 공유</a></li>-->
+                                        <!--</ul>-->
+                                    <!--</li>-->
+                                    <!--<li class="active dropdown">-->
+                                        <!--<a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">ACCOUNT<span class="sr-only">(current)</span>-->
+                                        <!--<span class="caret"></span></a>-->
+                                        <!--<ul class="dropdown-menu">-->
+                                            <!--<li><a href="/base/about/">결제관리</a></li>-->
+                                            <!--<li><a href="/account/signup">Signup</a></li>-->
+                                            <!--<li><a href="/account/login">Login</a></li>-->
+                                            <!--<li><a href="/account/logout">Logout</a></li>-->
+                                            <!--<li><a href="javascript:getTrasaction();">신뢰도관리</a></li>-->
+                                            <!--<li><a href="javascript:getTrasaction();">공유구매자 리뷰</a></li>-->
+                                            <!--<li><a href="javascript:getTrasaction();">지역설정</a></li>-->
+                                            <!--<li><a href="javascript:getTrasaction();">포인트관리</a></li>-->
+                                        <!--</ul>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</nav>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</section>-->
+
+<!--<div class="container-fluid">-->
+  <!--<div class="row content">-->
+    <!--<div class="col-sm-3 sidenav" style="background-color: #f1f1f1; height: 100%;">-->
+      <!--<h4>ACCOUNT</h4>-->
+      <!--<ul class="nav nav-pills nav-stacked">-->
+        <!--<li><a href="/blog/board/">결제관리</a></li>-->
+        <!--<li><a href="/account/signup/">SIGNUP</a></li>-->
+        <!--<li class="active"><a href="/account/login/">LOGIN</a></li>-->
+        <!--<li><a href="/account/logout/">LOGOUT</a></li>-->
+        <!--<li><a href="/blog/">신뢰도 관리</a></li>-->
+        <!--<li><a href="/blog/">공유구매자 리뷰</a></li>-->
+        <!--<li><a href="/blog/">지역설정</a></li>-->
+        <!--<li><a href="/blog/">포인트 관리</a></li>-->
+      <!--</ul><br>-->
+      <!--<div class="input-group">-->
+        <!--<input type="text" class="form-control" placeholder="Search Blog..">-->
+        <!--<span class="input-group-btn">-->
+          <!--<button class="btn btn-default" type="button">-->
+            <!--<span class="glyphicon glyphicon-search"></span>-->
+          <!--</button>-->
+        <!--</span>-->
+      <!--</div>-->
+    <!--</div>-->
+
+
+
+      <!--&lt;!&ndash;빈칸만들기&ndash;&gt;-->
+    <!--<div class="col-sm-3"></div>-->
+
+    <!--<div class="col-sm-4">-->
+
+         <!--<div class="container">-->
+            <!--<h1>login</h1><br><br>-->
+
+            <!--<form method="POST" action="{%url 'login'%}">-->
+                <!--{% csrf_token %}-->
+                <!--Username:-->
+                <!--<br>-->
+                <!--<input name="username" type="text">-->
+                <!--<br>-->
+                <!--Password:-->
+                <!--<br>-->
+                <!--<input name="password"type="password">-->
+                <!--<br><br>-->
+                <!--<input type="submit" class="btn btn-primary" value="sign up">-->
+            <!--</form>-->
+        <!--</div>-->
+
+
+
+
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+
+
+
+
+
+
+
+<!--{% endblock content %}-->
+
+
+
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+	<title>Login V16</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href='{% static "images/icons/favicon.ico" %}'>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animsition/css/animsition.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/daterangepicker/daterangepicker.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('/static/images/bg-01.jpg');">
+			<div class="wrap-login100 p-t-30 p-b-50">
+				<span class="login100-form-title p-b-41">
+					Account Login
+				</span>
+                <!--<form method="POST" action="{%url 'login'%}">-->
+                <!--{% csrf_token %}-->
+                <!--Username:-->
+                <!--<br>-->
+                <!--<input name="username" type="text">-->
+                <!--<br>-->
+                <!--Password:-->
+                <!--<br>-->
+                <!--<input name="password"type="password">-->
+                <!--<br><br>-->
+                <!--<input type="submit" class="btn btn-primary" value="sign up">-->
+            <!--</form>-->
+				<form method="POST" action="{%url 'login'%}" class="login100-form validate-form p-b-33 p-t-5" >
+                    {% csrf_token %}
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input100" type="text" name="username" placeholder="User name">
+						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="password" name="password" placeholder="Password">
+						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
+					</div>
+
+					<div class="container-login100-form-btn m-t-32">
+                        <input type="submit" class="login100-form-btn" value="sign up">
+						<!--<button class="login100-form-btn">-->
+							<!--Login-->
+						<!--</button>-->
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'vendor/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/countdowntime/countdowntime.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
+
+

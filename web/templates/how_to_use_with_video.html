@@ -1,0 +1,154 @@
+{% extends "base_full.html" %}
+
+{% block content %}
+        <section id="header">
+            <div class="header-area">
+                <div class="header_menu text-center" data-spy="affix" data-offset-top="50" id="nav">
+                    <div class="container">
+                        <nav class="navbar navbar-default zero_mp ">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-
+                                         target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand custom_navbar-brand" href="#"></a>
+                            </div>
+
+                            <div class="collapse navbar-collapse zero_mp" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right main_menu">
+                                    <li class=""><a href="/base/">Home </a></li>
+                                    <li class="active dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">About <span class="sr-only">(current)</span>
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/base/about/">About Company</a></li>
+                                            <li><a href="/base/howtouse/">이용방법 </a></li>
+                                            <li><a href="/base/howtousewithVideo/">이용방법 영상 예시</a></li>
+                                            <li><a href="/base/refund/">취소 및 환불 규정</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">Product
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/base/about/">Special Offer</a></li>
+                                            <li><a href="javascript:getTrasaction();">New Arrivals</a></li>
+                                            <li><a href="javascript:getTrasaction();">Populars</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">SHARE PURCHASE
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/base/about/">상품 검색</a></li>
+                                            <li><a href="javascript:getTrasaction();">공유구매 신청</a></li>
+                                            <li><a href="javascript:getTrasaction();">수령대기 상품</a></li>
+                                            <li><a href="javascript:getTrasaction();">취소 및 환불</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">BOARD
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/blog/board/">공지사항</a></li>
+                                            <li><a href="/blog/issues/">공유구매자 신고</a></li>
+                                            <li><a href="/blog/ItemRequest/">신상품 요청</a></li>
+                                            <li><a href="/blog/">Recipe 공유</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">ACCOUNT
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/base/about/">결제관리</a></li>
+                                            <li><a href="/account/signup">Signup</a></li>
+                                            <li><a href="/account/login">Login</a></li>
+                                            <li><a href="/account/logout">Logout</a></li>
+                                            <li><a href="javascript:getTrasaction();">신뢰도관리</a></li>
+                                            <li><a href="javascript:getTrasaction();">공유구매자 리뷰</a></li>
+                                            <li><a href="javascript:getTrasaction();">지역설정</a></li>
+                                            <li><a href="javascript:getTrasaction();">포인트관리</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="container-fluid text-center">
+          <div class="row content" style="height: 450px">
+            <div class="col-sm-2" style="padding-top: 20px; background-color: #f1f1f1; height: 100%">
+              <p><a href="/base/about">About Company</a></p>
+              <p><a href="/base/howtouse">이용방법</a></p>
+              <p><a href="/base/howtousewithVideo">이용방법 영상 예시</a></p>
+              <p><a href="/base/refund">취소 및 환불 규정</a></p>
+            </div>
+            <div class="col-sm-8 text-left">
+              <h1>이용방법 영상 예시</h1>
+                <br>
+              <img src="/static/img/main1.jpg" alt="..." width="500" height="1000">
+                <br><br><br>
+                <h3>핵심기능</h3>
+                <br>
+              <p>1인가구들이 특정 상품의 일부 수량을 구매하고자 하는 경우, 1인가구들을 매칭시켜 익명성이 보장된 단체 채팅방을 만든다. 단체 채팅방 내에서 구매의사자들은 의사를 조율 하여 구매의사 및 분담비율을 결정하고
+                  소비자들은 각각 해당 제품의 QR코드를 지급받는다. 소비자들은 서로의 신뢰도를 평가하고, 신뢰도는 공개된다.</p>
+                <br>
+                <h3>판매상품 확인기능</h3>
+                <br>
+                <p>
+1 생필품, 음식을 대상으로 하므로 지역단위로 서비스를 제공한다.
+예) 혜화동 쉐어마켓, 안암동 쉐어마켓
+2 주요 판매 대상은 소모품, 과일, 과자, 생필품 등으로, 휴지, 수세미, 세제, 바나나,
+수박, 과자 묶음 등 모든 종류의 상품이 예가 된다.</p>
+                <br>
+                <h3>부가서비스</h3>
+                <br>
+                <p>1 상품의 할인정보를 지속적으로 업데이트 한다.
+2 음식들의 Recipe를 자유롭게 게재할 수 있다.
+3 공동구매자 중 최초(실)구매자에게 인센티브를 제공한다.</p>
+                <br>
+
+                <!--youtube object로 추가 -->
+                <style type="text/css">
+                    .video-container { margin: 0;padding-bottom: 75%; max-width: 100%; height: 0; position: relative;overflow: hidden;}
+                    .video-container iframe,
+                    .video-container object,
+                    .video-container embed { margin: 0;padding: 0; width: 100%; height: 95%;position: absolute; top: 0;left: 0; }
+                </style>
+                <div class="video-container">
+                  <object type="text/html" width="560" height="315" data="//www.youtube.com/embed/G531R4sEzEY" allowFullScreen></object>
+                </div>
+
+              <hr>
+              <h3>Copyright</h3>
+              <p>Doyoung corp.</p>
+            </div>
+            <div class="col-sm-2 sidenav">
+              <div class="well">
+                <p>Share Market President</p>
+                <h3>Doyoung Kim</h3>
+                <img src="/static/img/doyoung.jpg" alt="..." width="500" height="1000">
+              </div>
+              <div class="well">
+                <p>Share Market Vice President</p>
+                <h3>Ellie Kim</h3>
+                <img src="/static/img/vice_president.png" alt="..." width="500" height="1000">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="container-fluid text-center">
+          <p>Share Market</p>
+        </footer>
+
+{% endblock content %}
+
+

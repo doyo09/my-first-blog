@@ -1,0 +1,129 @@
+{% extends "base_full.html" %}
+
+{% block content %}
+        <section id="header">
+            <div class="header-area">
+                <div class="header_menu text-center" data-spy="affix" data-offset-top="50" id="nav">
+                    <div class="container">
+                        <nav class="navbar navbar-default zero_mp ">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-
+                                         target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand custom_navbar-brand" href="#"></a>
+                            </div>
+
+                            <div class="collapse navbar-collapse zero_mp" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right main_menu">
+                                    <li class=""><a href="/base/">Home </a></li>
+                                    <li class="active dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">About <span class="sr-only">(current)</span>
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/base/about/">About Company</a></li>
+                                            <li><a href="/base/howtouse/">이용방법 </a></li>
+                                            <li><a href="/base/howtousewithVideo/">이용방법 영상 예시</a></li>
+                                            <li><a href="/base/refund/">취소 및 환불 규정</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">Product
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/base/about/">Special Offer</a></li>
+                                            <li><a href="javascript:getTrasaction();">New Arrivals</a></li>
+                                            <li><a href="javascript:getTrasaction();">Populars</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">SHARE PURCHASE
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/base/about/">상품 검색</a></li>
+                                            <li><a href="javascript:getTrasaction();">공유구매 신청</a></li>
+                                            <li><a href="javascript:getTrasaction();">수령대기 상품</a></li>
+                                            <li><a href="javascript:getTrasaction();">취소 및 환불</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">BOARD
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/blog/board/">공지사항</a></li>
+                                            <li><a href="/blog/issues/">공유구매자 신고</a></li>
+                                            <li><a href="/blog/ItemRequest/">신상품 요청</a></li>
+                                            <li><a href="/blog/">Recipe 공유</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">ACCOUNT
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/base/about/">결제관리</a></li>
+                                            <li><a href="/account/signup">Signup</a></li>
+                                            <li><a href="/account/login">Login</a></li>
+                                            <li><a href="/account/logout">Logout</a></li>
+                                            <li><a href="javascript:getTrasaction();">신뢰도관리</a></li>
+                                            <li><a href="javascript:getTrasaction();">공유구매자 리뷰</a></li>
+                                            <li><a href="javascript:getTrasaction();">지역설정</a></li>
+                                            <li><a href="javascript:getTrasaction();">포인트관리</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="container-fluid text-center">
+          <div class="row content" style="height: 450px">
+            <div class="col-sm-2" style="padding-top: 20px; background-color: #f1f1f1; height: 100%">
+              <p><a href="/base/about">About Company</a></p>
+              <p><a href="/base/howtouse">이용방법</a></p>
+              <p><a href="#">이용방법 영상 예시</a></p>
+              <p><a href="#">취소 및 환불 규정</a></p>
+            </div>
+            <div class="col-sm-8 text-left">
+              <h1>About Company</h1>
+                <br><br>
+              <img src="/static/img/main1.jpg" alt="..." width="500" height="1000">
+                <br><br><br>
+
+              <p>1인가구가 음식을 비롯한 생필품을 구매할 때, 실제가격보다 비싸게 사거나(편의점),
+                  어쩔 수 없이 필요 이상의 상품을 구매(마트)하게 됩니다. <br>마트에서 한번 바나나를 사면 일주 일 내내 갈색으로 변한 바나나 만을 먹는 일은 1인가구에게 익숙할 것입니다.<br>
+                  따라서, 복수의 1인가구가 필요한 구매를 공동으로 하는 공유구매를 시작하게 되었습니다. <br>간단히 말하자면, 실제 1인가구가 실제 마트에서 판매하는 바나나의 절반만이 필요한 때,
+                  2개의 1인가구는 마트 에서 바나나를 구매하고 그것을 절반씩으로 나눠 가집니다.<br>
+                  결과적으로, 1인가구는 실제가격보다 비싸게 사지도 않았고, 필요한 만큼의 상품을 구매할 수 있게 됩니다.<br></p>
+              <hr>
+              <h3>Copyright</h3>
+              <p>Doyoung corp.</p>
+            </div>
+            <div class="col-sm-2 sidenav">
+              <div class="well">
+                <p>Share Market President</p>
+                <h3>Doyoung Kim</h3>
+                <img src="/static/img/doyoung.jpg" alt="..." width="500" height="1000">
+              </div>
+              <div class="well">
+                <p>Share Market Vice President</p>
+                <h3>Ellie Kim</h3>
+                <img src="/static/img/vice_president.png" alt="..." width="500" height="1000">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="container-fluid text-center">
+          <p>Doyoung corp.</p>
+        </footer>
+
+{% endblock content %}
+
+

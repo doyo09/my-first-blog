@@ -1,0 +1,186 @@
+{% extends "base_full.html" %}
+
+{% block content %}
+        <section id="header">
+            <div class="header-area">
+                <div class="header_menu text-center" data-spy="affix" data-offset-top="50" id="nav">
+                    <div class="container">
+                        <nav class="navbar navbar-default zero_mp ">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-
+                                         target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand custom_navbar-brand" href="#"></a>
+                            </div>
+
+                            <div class="collapse navbar-collapse zero_mp" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right main_menu">
+                                    <li class=""><a href="/base/">Home </a></li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">About
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/base/about/">About Company</a></li>
+                                            <li><a href="/base/howtouse/">이용방법 </a></li>
+                                            <li><a href="/base/howtousewithVideo/">이용방법 영상 예시</a></li>
+                                            <li><a href="/base/refund/">취소 및 환불 규정</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">Product
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/base/about/">Special Offer</a></li>
+                                            <li><a href="javascript:getTrasaction();">New Arrivals</a></li>
+                                            <li><a href="javascript:getTrasaction();">Populars</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">SHARE PURCHASE
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/base/about/">상품 검색</a></li>
+                                            <li><a href="javascript:getTrasaction();">공유구매 신청</a></li>
+                                            <li><a href="javascript:getTrasaction();">수령대기 상품</a></li>
+                                            <li><a href="javascript:getTrasaction();">취소 및 환불</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="active dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">BOARD<span class="sr-only">(current)</span>
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/blog/board/">공지사항</a></li>
+                                            <li><a href="/blog/issues/">공유구매자 신고</a></li>
+                                            <li><a href="/blog/ItemRequest/">신상품 요청</a></li>
+                                            <li><a href="/blog/">Recipe 공유</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">ACCOUNT
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/base/about/">결제관리</a></li>
+                                            <li><a href="/account/signup">Signup</a></li>
+                                            <li><a href="/account/login">Login</a></li>
+                                            <li><a href="/account/logout">Logout</a></li>
+                                            <li><a href="javascript:getTrasaction();">신뢰도관리</a></li>
+                                            <li><a href="javascript:getTrasaction();">공유구매자 리뷰</a></li>
+                                            <li><a href="javascript:getTrasaction();">지역설정</a></li>
+                                            <li><a href="javascript:getTrasaction();">포인트관리</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav" style="background-color: #f1f1f1; height: 100%;">
+      <h4>Board</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="/blog/board/">공지사항</a></li>
+        <li><a href="/blog/issues/">공유구매자 신고</a></li>
+        <li><a href="/blog/ItemRequest/">신상품 요청</a></li>
+        <li class="active"><a href="/blog/">YUMMY RECIPES</a></li>
+      </ul><br>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blog..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+        <!--{% for post in posts %}-->
+        <!--<div class="post">-->
+            <!--<div class="date">-->
+                <!--{{ post.published_date }}-->
+            <!--</div>-->
+            <!--<h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>-->
+            <!--<p>{{ post.text|linebreaksbr }}</p>-->
+        <!--</div>-->
+    <!--{% endfor %}-->
+      {% for post in posts %}
+      <h4><small>YUMMY RECIPES
+          {% if user.is_authenticated %}
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+          {% endif %}
+          (+를 누르셔서 자유롭게 Recipe를 게재하실 수 있습니다.-로그인 하셔야 이용하실 수 있습니다-)
+      </small></h4>
+      <hr>
+      <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+      <h5><span class="glyphicon glyphicon-time"></span> Post by Anonymous, {{ post.published_date }}</h5>
+      <h5><span class="label label-danger">Food</span> <span class="label label-primary">Recipe</span></h5><br>
+      <p>{{ post.text|linebreaksbr }}</p>
+      <br><br>
+      {% endfor %}
+        <!---->
+      <!--<h4><small>YUMMY RECIPES</small></h4>-->
+      <!--<hr>-->
+      <!--<h2>Officially Blogging</h2>-->
+      <!--<h5><span class="glyphicon glyphicon-time"></span> Post by John Doe, Sep 24, 2015.</h5>-->
+      <!--<h5><span class="label label-success">Lorem</span></h5><br>-->
+      <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>-->
+      <!--<hr>-->
+
+      <h4>Leave a Comment:</h4>
+      <form role="form">
+        <div class="form-group">
+          <textarea class="form-control" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <br><br>
+
+      <p><span class="badge">2</span> Comments:</p><br>
+
+      <div class="row">
+        <div class="col-sm-2 text-center">
+          <img src="bandmember.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>Anja <small>Sep 29, 2015, 9:12 PM</small></h4>
+          <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <br>
+        </div>
+        <div class="col-sm-2 text-center">
+          <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>John Row <small>Sep 25, 2015, 8:25 PM</small></h4>
+          <p>I am so happy for you man! Finally. I am looking forward to read about your trendy life. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <br>
+          <p><span class="badge">1</span> Comment:</p><br>
+          <div class="row">
+            <div class="col-sm-2 text-center">
+              <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+            </div>
+            <div class="col-xs-10">
+              <h4>Nested Bro <small>Sep 25, 2015, 8:28 PM</small></h4>
+              <p>Me too! WOW!</p>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <p>Share Market Corp.</p>
+</footer>
+
+{% endblock content %}

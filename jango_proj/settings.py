@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     #장고에게 APP "blog"를 사용한다고 알려주자
     'blog',
     'web',
+    'account',
+
 
 ]
 
@@ -128,6 +130,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # STATIC ROOT 정적파일 경로
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
-
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),
+    '/Users/doyoung/PycharmProjects/jango_proj/account/static' ]
+#
 

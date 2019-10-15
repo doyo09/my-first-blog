@@ -1,0 +1,206 @@
+{% extends "base1.html" %}
+
+{% block content %}
+        <section id="header">
+            <div class="header-area">
+                <div class="header_menu text-center" data-spy="affix" data-offset-top="50" id="nav">
+                    <div class="container">
+                        <nav class="navbar navbar-default zero_mp ">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-
+                                         target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand custom_navbar-brand" href="#"></a>
+                            </div>
+
+                            <div class="collapse navbar-collapse zero_mp" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right main_menu">
+                                    <li class="active"><a href="#header">Home <span class="sr-only">(current)</span></a></li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">About
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/base/about/">About Company</a></li>
+                                            <li><a href="javascript:getTrasaction();">이용방</a></li>
+                                            <li><a href="javascript:getTrasaction();">이용방법 영상 예</a></li>
+                                            <li><a href="javascript:getTrasaction();">취소 및 환불 규정</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">Product
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/base/about/">Special Offer</a></li>
+                                            <li><a href="javascript:getTrasaction();">New Arrivals</a></li>
+                                            <li><a href="javascript:getTrasaction();">Populars</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">SHARE PURCHASE
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/base/about/">상품 검색</a></li>
+                                            <li><a href="javascript:getTrasaction();">공유구매 신청</a></li>
+                                            <li><a href="javascript:getTrasaction();">수령대기 상품</a></li>
+                                            <li><a href="javascript:getTrasaction();">취소 및 환불</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">BOARD
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/base/about/">공지사항</a></li>
+                                            <li><a href="javascript:getTrasaction();">공유구매자 신고</a></li>
+                                            <li><a href="javascript:getTrasaction();">신상품 요청</a></li>
+                                            <li><a href="javascript:getTrasaction();">Recipe 공유</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/base/about/">ACCOUNT
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/base/about/">결제관리</a></li>
+                                            <li><a href="javascript:getTrasaction();">신뢰도관리</a></li>
+                                            <li><a href="javascript:getTrasaction();">공유구매자 리뷰</a></li>
+                                            <li><a href="javascript:getTrasaction();">지역설정</a></li>
+                                            <li><a href="javascript:getTrasaction();">포인트관리</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--<section id="header">-->
+            <!--<div>-->
+                <!--<div>-->
+                    <!--<div>-->
+                        <!--<nav>-->
+
+                            <!--<div>-->
+                                <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">-->
+                                    <!--<span class="sr-only">Toggle navigation</span>-->
+                                    <!--<span class="icon-bar"></span>-->
+                                    <!--<span class="icon-bar"></span>-->
+                                    <!--<span class="icon-bar"></span>-->
+                                <!--</button>-->
+                                <!--<a href="#"></a>-->
+                            <!--</div>-->
+
+                            <!--&lt;!&ndash;<div class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">&ndash;&gt;-->
+                            <!--<div class="bd-navbar">-->
+                                <!--&lt;!&ndash;<ul class="navbar-nav bd-navbar-nav flex-row">&ndash;&gt;-->
+                                <!--<ul class="main-menu">-->
+                                    <!--<li class="nav-item">-->
+                                        <!--<h1><a class="nav-link" href="/"> Home <span class="sr-only">(current)</span></a></h1>-->
+                                    <!--</li>-->
+                                    <!--<li class="nav-item">-->
+                                        <!--<h1><a class="nav-link" href="/base/about/"> ABOUT </a></h1>-->
+                                            <!--<ul id="sub-menu">-->
+                                                <!--<li><h1><a href="/base/about/">About Company</a></h1></li>-->
+                                                <!--<li><h1><a href="javascript:getTrasaction();">이용방</a></h1></li>-->
+                                                <!--<li><h1><a href="javascript:getTrasaction();">이용방법 영상 예</a></h1></li>-->
+                                                <!--<li><h1><a href="javascript:getTrasaction();">취소 및 환불 규정</a></h1></li>-->
+                                            <!--</ul>-->
+                                    <!--</li>-->
+
+                                    <!--<li class="nav-item">-->
+                                        <!--<h1><a class="nav-link" href="/base/about/">PRODUCT </a></h1>-->
+                                            <!--<ul id="sub-menu">-->
+                                                <!--<li><h1><a href="/base/about/">Special Offer</a></h1></li>-->
+                                                <!--<li><h1><a href="javascript:getTrasaction();">New Arrivals</a></h1></li>-->
+                                                <!--<li><h1><a href="javascript:getTrasaction();">Populars</a></h1></li>-->
+                                            <!--</ul>-->
+                                    <!--</li>-->
+                                    <!--<li class="nav-item">-->
+                                        <!--<h1><a class="nav-link" href="/base/about/">SHARE PURCHASE</a></h1>-->
+                                            <!--<ul id="sub-menu">-->
+                                                <!--<li><h1><a href="/base/about/">상품 검색</a></h1></li>-->
+                                                <!--<li><h1><a href="javascript:getTrasaction();">공유구매 신청</a></h1></li>-->
+                                                <!--<li><h1><a href="javascript:getTrasaction();">수령대기 상품</a></h1></li>-->
+                                                <!--<li><h1><a href="javascript:getTrasaction();">취소 및 환불</a></h1></li>-->
+                                            <!--</ul>-->
+                                    <!--</li>-->
+                                    <!--<li class="nav-item">-->
+                                        <!--<h1><a class="nav-link" href="/base/about/">BOARD</a></h1>-->
+                                            <!--<ul id="sub-menu">-->
+                                                <!--<li><h1><a href="/base/about/">공지사항</a></h1></li>-->
+                                                <!--<li><h1><a href="javascript:getTrasaction();">공유구매자 신고</a></h1></li>-->
+                                                <!--<li><h1><a href="javascript:getTrasaction();">신상품 요청</a></h1></li>-->
+                                                <!--<li><h1><a href="javascript:getTrasaction();">Recipe 공유</a></h1></li>-->
+                                            <!--</ul>-->
+                                    <!--</li>-->
+                                    <!--<li class="nav-item">-->
+                                        <!--<h1><a class="nav-link" href="/base/about/">ACCOUNT</a></h1>-->
+                                            <!--<ul id="sub-menu">-->
+                                                <!--<li><h1><a href="/base/about/">결제관리</a></h1></li>-->
+                                                <!--<li><h1><a href="javascript:getTrasaction();">신뢰도관리</a></h1></li>-->
+                                                <!--<li><h1><a href="javascript:getTrasaction();">공유구매자 리뷰</a></h1></li>-->
+                                                <!--<li><h1><a href="javascript:getTrasaction();">지역설정</a></h1></li>-->
+                                                <!--<li><h1><a href="javascript:getTrasaction();">포인트관리</a></h1></li>-->
+                                            <!--</ul>-->
+                                    <!--</li>-->
+                                    <!--<li class="nav-item">-->
+                                        <!--<h1><a class="nav-link" href="/base/about/">Modify</a></h1>-->
+                                    <!--</li>-->
+                                    <!--<li class="nav-item">-->
+                                        <!--<h1><a class="nav-link" href="/base/about/">Remove</a></h1>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</nav>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</section>-->
+
+        <section id="slider">
+            <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
+                    <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                </ol>
+                    <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <div class="slider_overlay">
+                            <img src="/static/img/img1.jpg" alt="...">
+                            <div class="carousel-caption">
+                                <div class="slider_text">
+                                    <h3>성균관대학교 최고</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slider_overlay">
+                            <img src="/static/img/img3.jpg" alt="...">
+                            <div class="carousel-caption">
+                                <div class="slider_text">
+                                    <h3>웹개발기초강의 최고</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End of item-->
+                </div>
+                <!--End of Carousel Inner-->
+            </div>
+        </section>
+            <!--end of slider section-->
+            <!--End of item With Active-->
+
+
+{% endblock content %}
+
+
+
